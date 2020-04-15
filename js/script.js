@@ -21,21 +21,15 @@ $(function() {
 
     })
     $('.play').click(function() {
-        $('.trailer_poster').css({
-            'opacity': '0',
-            'pointer-events': 'none'
-        })
-        $('video').show()
+        $('.trailer_poster').hide()
+        $('video').css('opacity', '1')
         $('video')[0].play()
         $(this).hide()
     })
     $('video').on('ended', function() {
         $('.play').show()
-        $('video').hide()
-        $('.trailer_poster').css({
-            'opacity': '1',
-            'pointer-events': 'auto'
-        })
+        $('video').css('opacity', '0')
+        $('.trailer_poster').show()
 
     });
     if ($(window).width() < 767) {

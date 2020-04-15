@@ -144,7 +144,7 @@ header {
 }
 
 .trailer {
-    height: 100vh;
+    height: auto;
     position: relative;
     overflow: hidden;
     background: #000;
@@ -243,8 +243,8 @@ h1:after {
 .play {
     position: absolute;
     z-index: 9;
-    width: 8vw;
-    height: 8vw;
+    width: 6vw;
+    height: 6vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -309,10 +309,8 @@ h1:after {
 video {
     position: relative;
     width: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+    display: block;
+    opacity: 0;
 }
 
 .patients {
@@ -761,7 +759,7 @@ img.invest-main {
         margin-bottom: 3.8vh;
     }
     .pat_diag {
-        color: #e02b2c;
+        color: #e13b3b;
         text-align: center;
         font-size: 15px;
     }
