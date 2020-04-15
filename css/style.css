@@ -1,0 +1,922 @@
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url('../fonts/RubikMedium/RubikMedium.eot');
+    src: url('../fonts/RubikMedium/RubikMedium.eot?iefix') format('eot'), url('../fonts/RubikMedium/RubikMedium.woff') format('woff'), url('../fonts/RubikMedium/RubikMedium.ttf') format('truetype'), url('../fonts/RubikMedium/RubikMedium.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mont-sb {
+    font-weight: 600;
+}
+
+.mont-b {
+    font-weight: 700;
+}
+
+.medium {
+    font-family: 'Rubik-Medium';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+.header_bg img {
+    width: 100%;
+}
+
+nav {
+    position: fixed;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.scrolled {
+    background: rgba(15, 16, 21, .8);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 4.1vh 0;
+    margin: 0 1.33vw;
+    opacity: .8;
+    transition: opacity .3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+.age {
+    position: absolute;
+    left: 10.5%;
+    top: 2.7vh;
+    width: 2.3vw;
+    z-index: 99;
+}
+
+.age img {
+    width: 100%;
+    height: auto;
+}
+
+.header_text {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 39%;
+    text-align: center;
+}
+
+.seasons {
+    font-size: 1.9vw;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 1.1vh;
+    margin-bottom: 7.8vh;
+    opacity: 0;
+}
+
+.dates {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 28px 2px;
+    display: inline-block;
+    font-size: 2.3vw;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.dates .red_back {
+    content: '';
+    top: 4vw;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e02b2c;
+    z-index: -1;
+}
+
+.tnt-logo {
+    display: block;
+    margin: 29px auto 0px;
+    width: 16.3vw;
+}
+
+img.serial-logo {
+    width: 37vw;
+}
+
+.wrap {
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.header_bg {
+    font-size: 0px;
+    opacity: 0;
+}
+
+header {
+    background: #0f1015;
+    position: relative;
+}
+
+.trailer {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.trailer_poster img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nebo {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    transition: transform .4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.house {
+    position: relative;
+    width: 100%;
+    font-size: 0px;
+    margin-top: 1.7vh;
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+}
+
+.about_text {
+    font-size: 2.8vw;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    width: 50vw;
+    position: absolute;
+    top: 12.4vh;
+    left: 50%;
+    margin-left: -25vw;
+    z-index: 99;
+    font-weight: 800;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3.2vh;
+    margin-bottom: 5vh;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+}
+
+h1:after {
+    content: '...';
+    color: #e02b2c;
+    font-size: 25px;
+    position: absolute;
+    top: -47px;
+    letter-spacing: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.doctors,
+.patients,
+.investor {
+    padding-top: 14.9vh;
+    position: relative;
+}
+
+.doctors h1,
+.investor h1 {
+    color: #39363f;
+}
+
+.doc_pic {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 0.9vh;
+}
+
+.doctor.mont {
+    position: relative;
+    overflow: hidden;
+    width: 28%;
+    transition: opacity .5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.play {
+    position: absolute;
+    z-index: 9;
+    width: 8vw;
+    height: 8vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    cursor: pointer;
+    transition: transform .4s linear;
+}
+
+.play:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.play img {
+    width: 100%;
+}
+
+.doctor.mont:hover .doc_type {
+    left: 0px;
+}
+
+.doctor.mont:last-child {
+    margin-right: 0vw;
+}
+
+.doc_pic img {
+    width: 100%;
+}
+
+.doc_name {
+    color: #39363f;
+    font-size: 24px;
+}
+
+.doc_act {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 2px;
+    margin-bottom: 2.3vh;
+    color: #909090;
+}
+
+.doc_type {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    background: #e02b2c;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    overflow: hidden;
+    border-radius: 0px 5px 5px 0px;
+    left: -100%;
+    transition: left .4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.doc_desc {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+video {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.patients {
+    background: url(../images/patients_bg.jpg) no-repeat center / cover;
+}
+
+.patients h1 {
+    color: #fefefe;
+    margin-top: 2vh;
+}
+
+.patients .wrap {
+    width: 1060px;
+    margin: 6.6vh auto 0px;
+    padding: 0 0 19.5vh;
+}
+
+.pat_gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.patient {
+    margin-right: 70px;
+    width: calc(100% / 5);
+    text-align: center;
+}
+
+.patient:last-child {
+    margin-right: 0px;
+}
+
+.pat_diag {
+    color: #e02b2c;
+    text-align: center;
+    font-size: 12px;
+}
+
+.pat_pic {
+    margin: 2vh 0px 0.8vh;
+}
+
+.pat_pic img {
+    width: 100%;
+}
+
+.pat_name {
+    color: #fff;
+    font-size: 18px;
+}
+
+.pat_act {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 7px;
+    margin-bottom: 2.6vh;
+    color: #909090;
+}
+
+.pat_desc {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.investor {
+    padding-bottom: 11.4vh;
+    padding-top: 12vh;
+}
+
+.investor .wrap {
+    width: 1502px;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+img.invest-kodred {
+    position: absolute;
+    top: 0px;
+    left: 10.5%;
+    /*10.5*/
+    /* width: 20.3vw; */
+    height: 100%;
+    width: auto;
+    transition: left .8s linear;
+}
+
+.inv_info {
+    width: 70%;
+    margin: 7vh auto 0vh;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+img.invest-main {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 40vw;
+    opacity: 0;
+    transition: opacity .8s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.inv_info__wrap {
+    margin-left: 4vw;
+    padding-top: 17vh;
+}
+
+.inv_info__wrap:before {
+    content: '';
+    background: url(../images/wallet.png) no-repeat center / cover;
+    position: absolute;
+    width: 4.7vw;
+    height: 4.7vw;
+    top: 5vh;
+}
+
+.inv_info__name {
+    font-size: 1.9vw;
+    font-weight: 700;
+    color: #39363f;
+}
+
+.inv_info__act {
+    font-size: 12px;
+    margin-top: .4vh;
+    margin-bottom: 2.4vh;
+    color: #9e9e9e;
+}
+
+.inv_info__desc {
+    width: 70%;
+    font-size: 16px;
+    line-height: 137%;
+    color: #000;
+}
+
+.about_footer {
+    font-size: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about_footer img {
+    width: 100%;
+    min-width: 1920px;
+}
+
+@media(max-width:1370px) {
+    .about_footer img {
+        width: 110%;
+        min-width: 110%;
+    }
+}
+
+@media(max-width:1150px) {
+    .patients .wrap {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 6.6vh auto 0px;
+        padding: 0 0 19.5vh;
+    }
+    .patient:nth-child(3) {
+        margin-right: 0px;
+    }
+    .patient {
+        margin-right: 0px;
+        width: calc(100% / 6);
+        text-align: center;
+        margin-right: 0px;
+        margin-bottom: 8vh;
+    }
+    .investor .wrap {
+        width: 100%;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    img.invest-main {
+        border-radius: 10px;
+        overflow: hidden;
+        width: 70vw;
+    }
+    .doctors .wrap {
+        width: 90% !important;
+    }
+}
+
+#nav-icon4 span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(2) {
+    top: 11px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon4 span:nth-child(3) {
+    top: 23px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon4.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -3px;
+    left: 5px;
+}
+
+#nav-icon4.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+#nav-icon4.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 18px;
+    left: 5px;
+}
+
+#nav-icon4 {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon4 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon4.open span {
+    background: #fff !important;
+}
+
+.mob {
+    display: none;
+}
+
+.mob_header_bg img {
+    width: 100%;
+}
+
+.mob_header_bg {
+    font-size: 0px;
+}
+
+.burger {
+    position: fixed;
+    padding-top: 27px;
+    padding-left: 22px;
+    z-index: 999;
+}
+
+.line {
+    position: absolute;
+    height: 2px;
+    background: red;
+    bottom: 2vh;
+    transition: left .3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@media(min-width:768px) {
+    .doctors .wrap {
+        width: 980px;
+        margin: 0 auto 17vh;
+        padding: 0;
+    }
+    .doc_gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:767px) {
+    .pat_gallery {
+        display: block;
+    }
+    .about_footer_pic {
+        display: none;
+    }
+    .doc_type {
+        left: 0px;
+    }
+    .mob {
+        display: block;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        background: #393949 !important;
+        height: 100vh;
+        z-index: 99;
+        position: fixed;
+        /* margin-top: -61px; */
+        padding-top: 10vh;
+    }
+    nav a {
+        font-size: 6vw;
+        font-weight: 800 !important;
+    }
+    .open_nav {
+        display: flex;
+    }
+    .header_bg {
+        display: none;
+    }
+    header .wrap {
+        display: none;
+    }
+    .age {
+        display: none;
+    }
+    .trailer_poster {
+        font-size: 0px;
+    }
+    .play {
+        width: 12vw;
+        height: 12vw;
+    }
+    .trailer_poster img {
+        position: relative;
+        min-width: 100%;
+        min-height: auto;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+    }
+    .trailer {
+        height: auto;
+        background: #000;
+    }
+    .house {
+        position: relative;
+        width: 150%;
+        font-size: 0px;
+        margin-top: 20.7vh;
+        margin-left: -21%;
+    }
+    .nebo {
+        width: 150%;
+    }
+    .about_text {
+        font-size: 6vw;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        width: 90vw;
+        position: absolute;
+        top: 6.4vh;
+        left: 50%;
+        margin-left: -45vw;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, .5);
+    }
+    .invest-kodred {
+        display: none;
+    }
+    .mob-invest-kodred {
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    .investor h1 {
+        color: #fff;
+    }
+    .investor h1:after {
+        content: '...';
+        color: #fff;
+    }
+    .inv_info {
+        flex-direction: column;
+        margin: 5vh auto 0vh;
+    }
+    .about_footer img {
+        width: 100vw !important;
+        min-width: 100vw !important;
+        height: auto;
+        margin-left: 0vw;
+    }
+    .mob_about_footer {
+        position: relative;
+        height: 100%;
+        display: block;
+    }
+    .doctors,
+    .patients,
+    .investor {
+        padding-top: 9vh;
+        position: relative;
+    }
+    .patients {
+        padding-top: 14.5vh;
+    }
+    .patients h1 {
+        color: #fefefe;
+        margin-top: 2vh;
+        margin-bottom: 3.8vh;
+    }
+    .pat_diag {
+        color: #e02b2c;
+        text-align: center;
+        font-size: 15px;
+    }
+    .pat_pic {
+        margin: 2.2vh 0px 2vh;
+        position: relative;
+    }
+    .pat_name {
+        color: #fff;
+        font-size: 22px;
+    }
+    .pat_pic img {
+        width: 54vw;
+        margin: 0 auto;
+    }
+    .pat_act {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: -3px;
+        margin-bottom: 15px;
+        color: #909090;
+    }
+    .pat_desc {
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        line-height: 130%;
+    }
+    h1 {
+        font-weight: 800;
+        font-size: 4.2vh;
+    }
+    .doctors .wrap {
+        width: 70% !important;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        padding-bottom: 8.2vh;
+    }
+    .doctors .owl-item {
+        display: inline-block;
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .doctor.mont {
+        width: 100%;
+        margin-right: 10px;
+    }
+    .doc_pic {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .doc_name {
+        color: #39363f;
+        font-size: 3.4vh;
+    }
+    .doc_act {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        color: #909090;
+    }
+    .doc_desc {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        width: 80%;
+        line-height: 140%;
+    }
+    .owl-dots {
+        display: none;
+    }
+    .owl-nav button {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -100%);
+        border: none;
+        background: transparent;
+    }
+    .owl-nav button img {
+        width: calc(69px / 2);
+        height: auto;
+    }
+    .owl-prev {
+        left: 0px;
+    }
+    .owl-next {
+        right: 0px;
+        transform: translate(0, -100%) rotate(180deg) !important;
+    }
+    .patients .owl-nav button {
+        transform: translate(0, -90%);
+    }
+    .patients .owl-next {
+        right: 0px;
+        transform: translate(0, -90%) rotate(180deg) !important;
+    }
+    .patients .wrap {
+        width: 71% !important;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        padding-bottom: 6vh;
+    }
+    .patients .owl-item {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .patient.mont {
+        width: 71vw;
+        display: block;
+    }
+    .investor {
+        padding-bottom: 6.9vh;
+        padding-top: 14.4vh !important;
+    }
+    .inv_info__wrap {
+        margin-left: 0;
+        padding-top: 19vh;
+        text-align: center;
+    }
+    .inv_info__wrap:before {
+        content: '';
+        background: url(../images/wallet.png) no-repeat center / cover;
+        position: absolute;
+        width: 16.7vw;
+        height: 16.7vw;
+        top: 45vh;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .inv_info__name {
+        font-size: 6.9vw;
+        font-weight: 700;
+        color: #39363f;
+    }
+    .inv_info__desc {
+        width: 100%;
+        font-size: 16px;
+        line-height: 137%;
+        color: #000;
+        font-weight: 700;
+    }
+    .inv_info__act {
+        font-size: 15px;
+        margin-top: 1px;
+        margin-bottom: 25px;
+        color: #9e9e9e;
+    }
+    .about_footer {
+        display: block;
+    }
+}
