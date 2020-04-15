@@ -54,9 +54,9 @@ $(function() {
     }
 
     gsap.to(".seasons", { duration: 2, delay: 0.5, opacity: 1, ease: "none" });
-    gsap.to(".dates", { duration: 2, delay: 0.8, opacity: 1, ease: "none" });
+    gsap.to(".date_text", { duration: 2, delay: 1.5, opacity: 1, ease: "none" });
     gsap.to(".header_bg", { duration: 2, opacity: 1, ease: "none" });
-    gsap.to(".red_back", { duration: .5, delay: 1.5, top: 0 });
+    gsap.to(".red_back", { duration: .5, delay: 0.8, left: 0 });
     $('#nav-icon4').click(function() {
         $(this).toggleClass('open');
         $('nav').toggleClass('open_nav')
