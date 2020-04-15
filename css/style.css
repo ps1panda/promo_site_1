@@ -113,7 +113,7 @@ nav a:hover {
 .dates .red_back {
     content: '';
     top: 0;
-    left: -20vw;
+    left: -30vw;
     position: absolute;
     width: 100%;
     height: 100%;
