@@ -634,6 +634,9 @@ img.invest-main {
 }
 
 @media(max-width:767px) {
+    .patients {
+        background: url(../images/pattern.jpg) repeat top center/ 100%;
+    }
     .pat_gallery {
         display: block;
     }
